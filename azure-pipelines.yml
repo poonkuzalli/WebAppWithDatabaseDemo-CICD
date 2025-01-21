@@ -23,6 +23,7 @@ steps:
     projects: |
       **/*.csproj
       !**/*Database.sqlproj
+      !**/*SeleniumUiTests.csproj
     restoreArguments: '--configuration $(BuildConfiguration)'
     feedsToUse: 'select'
 - task: DotNetCoreCLI@2
@@ -31,6 +32,7 @@ steps:
     projects: |
       **/*.csproj
       !**/*Database.sqlproj
+      !**/*SeleniumUiTests.csproj
     arguments: '--configuration $(BuildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
